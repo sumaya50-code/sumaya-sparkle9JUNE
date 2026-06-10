@@ -1,0 +1,8 @@
+{
+  "name": "sumaya-sparkle-deploy",
+  "private": true,
+  "scripts": {
+    "build": "npm install --prefix sumaya-sparkle9JUNE && npm run build --prefix sumaya-sparkle9JUNE",
+    "deploy": "npm install --prefix sumaya-sparkle9JUNE && npm run deploy --prefix sumaya-sparkle9JUNE"
+  }
+}
