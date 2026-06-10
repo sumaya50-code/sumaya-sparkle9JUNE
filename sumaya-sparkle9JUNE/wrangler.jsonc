@@ -1,7 +1,11 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "tanstack-start-app",
-  "compatibility_date": "2025-09-24",
+  "compatibility_date": "2026-06-10",
   "compatibility_flags": ["nodejs_compat"],
+  // Custom SSR error wrapper; build output uses dist/server/wrangler.json.
   "main": "src/server.ts",
+  "observability": {
+    "enabled": true
+  }
 }

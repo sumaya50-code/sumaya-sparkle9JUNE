@@ -12,7 +12,9 @@ const isVercel = !!process.env.VERCEL;
 // Cloudflare: custom server entry wraps SSR errors for Workers.
 // Vercel: Nitro plugin builds the server — do not use the Cloudflare worker entry.
 export default defineConfig({
-  cloudflare: isVercel ? false : undefined,
+  cloudflare: isVercel
+    ? false
+    : { viteEnvironment: { name: "ssr" } },
   plugins: isVercel ? [nitro()] : [],
   tanstackStart: isVercel
     ? {}
